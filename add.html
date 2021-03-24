@@ -28,7 +28,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="add">
       <div class="container">
         <h1>Add</h1>
         <form name="meal">
@@ -38,10 +38,19 @@
             name="image"
             id="image"
             placeholder="http://image.png"
+            required
           />
 
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            minlength="2"
+            maxlength="32"
+            required
+          />
 
           <label for="ingredients">Ingredients (sep. by comma):</label>
           <input
@@ -49,13 +58,24 @@
             name="ingredients"
             id="ingredients"
             placeholder="Milk, Eggs"
+            minlength="2"
+            maxlength="255"
+            required
           />
 
           <label for="price">Price (Eur):</label>
-          <input type="number" name="price" id="price" placeholder="15" />
+          <input
+            type="number"
+            name="price"
+            id="price"
+            placeholder="15"
+            min="1"
+            max="100"
+            required
+          />
 
           <label for="type">Type</label>
-          <select name="type" id="type">
+          <select name="type" id="type" required>
             <option value="starter">Starter</option>
             <option value="soup">Soup</option>
             <option value="main">Main</option>
